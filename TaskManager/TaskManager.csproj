@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DD6A75B3-DA8C-42A1-B8E1-1720EAA04CA1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TaskManager</RootNamespace>
+    <AssemblyName>Task Manager</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo3.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>.\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CController.cs" />
+    <Compile Include="CCustomer.cs" />
+    <Compile Include="CCustomListBoxFile.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CCustomListBoxTask.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CDateTimeExtension.cs" />
+    <Compile Include="CFile.cs" />
+    <Compile Include="CHorizontalListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CPreFile.cs" />
+    <Compile Include="CReminder.cs" />
+    <Compile Include="CTask.cs" />
+    <Compile Include="CXORChiper.cs" />
+    <Compile Include="FAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAbout.Designer.cs">
+      <DependentUpon>FAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAddReminder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAddReminder.Designer.cs">
+      <DependentUpon>FAddReminder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FEditTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEditTask.Designer.cs">
+      <DependentUpon>FEditTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FFilterByCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFilterByCustomer.Designer.cs">
+      <DependentUpon>FFilterByCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FFilterByExecutionDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFilterByExecutionDate.Designer.cs">
+      <DependentUpon>FFilterByExecutionDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMain.Designer.cs">
+      <DependentUpon>FMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FNews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FNews.Designer.cs">
+      <DependentUpon>FNews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FProcess.Designer.cs">
+      <DependentUpon>FProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSetStoragePath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSetStoragePath.Designer.cs">
+      <DependentUpon>FSetStoragePath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FAbout.resx">
+      <DependentUpon>FAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAddReminder.resx">
+      <DependentUpon>FAddReminder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FEditTask.resx">
+      <DependentUpon>FEditTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFilterByCustomer.resx">
+      <DependentUpon>FFilterByCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFilterByExecutionDate.resx">
+      <DependentUpon>FFilterByExecutionDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMain.resx">
+      <DependentUpon>FMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FNews.resx">
+      <DependentUpon>FNews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FProcess.resx">
+      <DependentUpon>FProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSetStoragePath.resx">
+      <DependentUpon>FSetStoragePath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
+    <Content Include="logo1.ico" />
+    <Content Include="logo2.ico" />
+    <Content Include="logo3.ico" />
+    <None Include="Properties\add1.png" />
+    <None Include="Properties\search.png" />
+    <None Include="Properties\uncheck_all.png" />
+    <None Include="Properties\check_all.png" />
+    <None Include="Properties\ni10.ico" />
+    <None Include="Properties\ni9.ico" />
+    <None Include="Properties\ni8.ico" />
+    <None Include="Properties\ni7.ico" />
+    <None Include="Properties\ni6.ico" />
+    <None Include="Properties\ni5.ico" />
+    <None Include="Properties\ni4.ico" />
+    <None Include="Properties\ni3.ico" />
+    <None Include="Properties\ni2.ico" />
+    <None Include="Properties\ni1.ico" />
+    <None Include="Properties\ni0.ico" />
+    <None Include="Properties\ni10.png" />
+    <None Include="Properties\ni9.png" />
+    <None Include="Properties\ni8.png" />
+    <None Include="Properties\ni7.png" />
+    <None Include="Properties\ni6.png" />
+    <None Include="Properties\ni5.png" />
+    <None Include="Properties\ni4.png" />
+    <None Include="Properties\ni3.png" />
+    <None Include="Properties\ni2.png" />
+    <None Include="Properties\ni1.png" />
+    <None Include="Properties\logo1.png" />
+    <None Include="Properties\remove.png" />
+    <None Include="Properties\du.png" />
+    <None Include="Properties\ud.png" />
+    <None Include="Properties\order.png" />
+    <None Include="Properties\priority.png" />
+    <None Include="Properties\7.png" />
+    <None Include="Properties\6.png" />
+    <None Include="Properties\5.png" />
+    <None Include="Properties\4.png" />
+    <None Include="Properties\3.png" />
+    <None Include="Properties\2.png" />
+    <None Include="Properties\1.png" />
+    <None Include="Properties\0.png" />
+    <None Include="Properties\8.png" />
+    <None Include="Properties\9.png" />
+    <None Include="Properties\set_status.png" />
+    <None Include="Properties\filter.png" />
+    <None Include="Properties\edit.png" />
+    <None Include="Properties\add.png" />
+    <None Include="Properties\folder1.png" />
+    <None Include="Properties\paused.png" />
+    <None Include="Properties\outstanding.png" />
+    <None Include="Properties\folder.png" />
+    <None Include="Properties\done.png" />
+    <None Include="Properties\active.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
